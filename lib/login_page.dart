@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'pantallaMenu.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -85,13 +86,18 @@ class _LoginPageState extends State<LoginPage> {
                       color: Colors.blueAccent,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Text(
-                      "Ingresar",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                    child: FlatButton(
+                      child: Text(
+                        "Ingresar",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => pantallaMenu()));
+                      },
                     ),
                   ),
                 ),
